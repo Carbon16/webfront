@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="Carbon1769" />
+    <title>Shooting Ladder</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="styles.css" rel="stylesheet" />
+    <link href="noot.css" rel="stylesheet" />
+    <script src="fetch.js"></script> 
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let elements = []
+      let container = document.querySelector('#container')
+      // Add each row to the array
+      container.querySelectorAll('.row').forEach(el => elements.push(el))
+      // Clear the container
+      container.innerHTML = ''
+      // Sort the array from highest to lowest
+      elements.sort((a, b) => b.querySelector('.score').textContent - a.querySelector('.score').textContent)
+      // Put the elements back into the container
+      elements.forEach(e => container.appendChild(e))
+    })
+</script>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container px-4">
+            <img src="icon2.png" alt="logo" height="30" width="30" style="margin-right: 1em;">
+            <a class="navbar-brand" href="#page-top">Secure Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#Ladder">Ladder</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#add">Add score</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#rules">Rules</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="bg-primary bg-gradient text-white">
+        <div class="container px-4 text-center">
+            <h1 class="fw-bolder">Welcome to the Secure Portal</h1>
+            <p class="lead">This is the application page</a></p>
+            <a class="btn btn-lg btn-light" href="#noot">Applications</a>
+        </div>
+    </header>
+    <!-- About section-->
+    <section id="noot">
+        <div id="container" class="cent bx cont">
+            <div class="row hi">
+              <div class="name">Ray W</div><div class="score">0</div>
+            </div>
+          
+            <div class="row hi">
+              <div class="name">Bea D</div><div class="score">0</div>
+            </div>
+          
+            <div class="row hi">
+              <div class="name">Jacob P</div><div class="score">0</div>
+            </div>
+          
+            <div class="row hi">
+              <div class="name">TMB</div><div class="score">0</div>
+            </div>
+          
+            <div class="row hi">
+              <div class="name">AMP</div><div class="score">0</div>
+            </div>
+
+            <div class="row hi">
+                <div class="name">Oliver B</div><div class="score">0</div>
+            </div>
+            
+            <div class="row hi">
+                <div class="name">Oliver S</div><div class="score">0</div>
+            </div>
+            
+            <div class="row hi">
+                <div class="name">Leo S</div><div onload="LGS()" id="LGS" class="score">0</div>
+            </div>
+            
+            <div class="row hi">
+                <div class="name">Lucy H</div><div class="score">0</div>
+            </div>
+            
+            <div class="row hi">
+                <div class="name">Gemma W</div><div class="score">0</div>
+            </div>
+
+            <div class="row hi">
+                <div class="name">Alex K</div><div class="score">0</div>
+            </div>
+            
+            <div class="row hi">
+                <div class="name">Joshua D</div><div class="score">0</div>
+            </div>
+
+            <div class="row hi">
+                <div class="name">Arthut VG</div><div class="score">0</div>
+            </div>
+            
+            <div class="row hi">
+                <div class="name">Tilly W</div><div class="score">0</div>
+            </div>
+            
+            <div class="row hi">
+                <div class="name">Ansel C</div><div class="score">0</div>
+            </div>
+          </div>
+    </section>
+    <section id="noot">
+        <div id="container" class="cent bx cont">
+            <script>
+                var url = "https://api.cloudflare.com/client/v4/accounts/01a7362d577a6c3019a474fd6f485823/storage/kv/namespaces/0f2ac74b498b48028cb68387c421e279/values/My-Key?expiration=1578435000&expiration_ttl=300";
+                var xhr = new XMLHttpRequest();
+                xhr.open("PUT", url);
+                xhr.setRequestHeader("X-Auth-Email", "user@example.com");
+                xhr.setRequestHeader("X-Auth-Key", "c2547eb745079dac9320b638f5e225cf483cc5cfdda41");
+                xhr.setRequestHeader("Content-Type", "text/plain");
+                xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    console.log(xhr.status);
+                    console.log(xhr.responseText);
+                }};
+                var data = '"Some Value"';
+                xhr.send(data);
+            </script>
+        </div>
+    </section>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
