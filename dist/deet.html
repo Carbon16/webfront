@@ -33,7 +33,6 @@
     <script>
         let params = new URLSearchParams(document.location.search);
         let name = params.get("id")
-        alert(name)
         var ur = String(name);
         fetch(`https://api.lgsk.me/sh/${ur}`)
             .then(response => response.json())
