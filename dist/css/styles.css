@@ -64,8 +64,23 @@
   --bs-body-bg: #fff;
 }
 
-.center {
+.dashed {
+  border-style: dashed;
+  border-color: red;
+  padding: 10px;
+  margin: 0;
+  width: 150px;
   text-align: center;
+  border-width: thick;
+}
+
+.center1 {
+  text-align: center;
+}
+
+.center2 {
+  margin: auto;
+  padding: 10px;
 }
 
 .wrapper {
@@ -2514,8 +2529,8 @@ textarea.form-control-lg {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  -webkit-print-color-adjust: exact;
-          color-adjust: exact;
+  /* -webkit-print-color-adjust: exact;
+          color-adjust: exact; */
 }
 .form-check-input[type=checkbox] {
   border-radius: 0.25em;

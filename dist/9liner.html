@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Days Without Injury</title>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        </br>
+        <h1 class="center1 fw-bold">Days Without Injury</h1>
+        </br>
+        </br>
+        </br>
+        </br>
+        <h1 id="c1" class="dashed center2"><i>ERROR</i></h1>
+    </body>
+    <script>
+        fetch('http://api.lgsk.me/count')
+            .then(response => response.json())
+            .then(data => document.getElementById("c1").innerHTML = "<b>"+data+"<b>");
+        
+    </script>
+</html>
