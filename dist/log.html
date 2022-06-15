@@ -28,9 +28,9 @@
             .then(data => document.getElementById("c1").innerHTML = "<b>"+data+"<b>");
         //List
         function listIn(data) {
-            var message = `<i>${data.length} logs found</i>\n<table>\n<tr>\n<th>Date-time</th>\n<th>Severity</th>\n<th>Attempt</th><th>Link</th>\n</tr>\n`;
+            var message = `<i>${data.length} logs found</i>\n<table>\n<tr>\n<th>Date-time</th>\n<th>Severity</th>\n<th>Attempt</th><th>Note</th><th>Link</th>\n</tr>\n`;
             data.forEach(data=> {
-                message += `<tr>\n<td>${data.hum}</td>\n<td>${data.severity}</td>\n<td>${data.type}</td><td><a href="https://lgsk.me/deet?id=${data.id}">Click Here</a> </td>\n</tr>\n`;
+                message += `<tr>\n<td>${data.hum}</td>\n<td>${data.severity}</td>\n<td>${data.type}</td><td><a onclick="note(${data.id})">Click</a></td><td><a href="https://lgsk.me/deet?id=${data.id}">Click Here</a></td>\n</tr>\n`;
             });
             return message;
         };
@@ -38,5 +38,11 @@
         fetch('https://api.lgsk.me/sh')
             .then(response => response.json())
             .then(data => document.getElementById("list").innerHTML = listIn(data) +"</table>");
+        
+        function note(id) {
+            fetch(`https://api.lgsk.me/sh/${id}`)
+                .then(response => response.json())
+                .then(data => alert(data.note));
+        }
     </script>
 </html>
