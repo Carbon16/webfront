@@ -28,9 +28,9 @@
             .then(data => document.getElementById("c1").innerHTML = "<b>"+data+"<b>");
         //List
         function listIn(data) {
-            var message = `<i>${data.length} logs found</i>\n<table>\n<tr>\n<th>Date-time</th>\n<th>Severity</th>\n<th>Attempt</th><th>Note</th><th>Link</th>\n</tr>\n`;
+            var message = `<i>${data.length} logs found</i>\n<table>\n<tr>\n<th>Date-time</th>\n<th>Severity</th>\n<th>Note</th><th>Link</th>\n</tr>\n`;
             data.forEach(data=> {
-                message += `<tr>\n<td>${data.hum}</td>\n<td>${data.severity}</td>\n<td>${data.type}</td><td><a onclick="note(${data.id})">Click</a></td><td><a href="https://lgsk.me/deet?id=${data.id}">Click Here</a></td>\n</tr>\n`;
+                message += `<tr>\n<td>${data.hum}</td>\n<td>${data.severity}</td>\n<td><a onclick="note(${data.id})">Click</a></td><td><a href="https://lgsk.me/deet?id=${data.id}">Click Here</a></td>\n</tr>\n`;
             });
             return message;
         };
