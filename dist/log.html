@@ -47,7 +47,7 @@
                 var last = data[len2-1].stmp;
                 var noww = new Date().getTime();
                 var count = Math.floor((noww - last)/86400000);
-                var countDownDate = (last+86400000*(count+1))-3600000;
+                var countDownDate = (last+86400000*(count+1));
                 console.log(countDownDate)
                 // Update the count down every 1 second
                 var x = setInterval(function() {
