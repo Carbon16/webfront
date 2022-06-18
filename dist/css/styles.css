@@ -74,6 +74,16 @@
   border-width: thick;
 }
 
+.dashed2 {
+  border-style: dashed;
+  border-color: gold;
+  padding: 10px;
+  margin: 0;
+  width: 300px;
+  text-align: center;
+  border-width: medium;
+}
+
 .center1 {
   text-align: center;
 }

@@ -17,6 +17,7 @@
         <h1 id="c1" class="dashed center2"><i>ERROR</i></h1>
         </br>
         </br>
+        <h1 id="c2" class="dashed2 center2"><i>ERROR</i></h1>
         </br>
         </br>
         <div id="list" class="">ERROR</div>
@@ -38,7 +39,30 @@
         fetch('https://api.lgsk.me/sh')
             .then(response => response.json())
             .then(data => document.getElementById("list").innerHTML = listIn(data) +"</table>");
-        
+
+        fetch('https://api.lgsk.me/sh')
+            .then(response => response.json())
+            .then(data => {
+                var len2 = data.length;
+                var last = data[len2-1].stmp;
+                var noww = new Date().getTime();
+                var count = Math.round((noww - last)/86400000);
+                var countDownDate = (last+86400000*(count+1))-3600000;
+                console.log(countDownDate)
+                // Update the count down every 1 second
+                var x = setInterval(function() {
+                    // Get oday's date and time
+                    var now = new Date().getTime();
+                    // Find the distance between now and the count down date
+                    var distance = countDownDate - now;
+                    // Time calculations for days, hours, minutes and seconds
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    document.getElementById("c2").innerHTML = `<b>${days}:${hours}:${minutes}:${seconds}</b>`;
+                }, 1000)});
+
         function note(id) {
             fetch(`https://api.lgsk.me/sh/${id}`)
                 .then(response => response.json())
