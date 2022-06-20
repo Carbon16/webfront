@@ -3,13 +3,13 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Days Without Injury</title>
+        <title>Days Without Incident</title>
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
-    <body>
+    <body id="bigchungus">
         </br>
-        <h1 class="center1 fw-bold">Days Without Injury</h1>
+        <h1 class="center1 fw-bold">Days Without Incident</h1>
         </br>
         </br>
         </br>
@@ -23,6 +23,18 @@
         <div id="list" class="">ERROR</div>
     </body>
     <script>
+        params = new URLSearchParams(document.location.search);
+        function hashCode(string) {
+            var hash = 0, i, chr;
+            if (string.length === 0) return hash;
+            for (i = 0; i < string.length; i++) {
+                chr   = string.charCodeAt(i);
+                hash  = ((hash << 5) - hash) + chr;
+                hash |= 0; // Convert to 32bit integer
+            }
+            return hash;
+            alert(hash);
+        };
         //Counter
         fetch('https://api.lgsk.me/count')
             .then(response => response.json())
@@ -68,5 +80,16 @@
                 .then(response => response.json())
                 .then(data => alert(data.note));
         }
+
+        //Fetch the hash from api.lgsk.me/code and compare it to the url param. If they match, do nothing, If not, redirect to index.html
+        fetch('https://api.lgsk.me/code')
+            .then(response => response.json())
+            .then(data => {
+                if (hashCode(params.get('code')) != data) {
+                    alert(data)
+                    document.getElementById("bigchungus") = "Not authorized";
+                }
+            });
+
     </script>
 </html>
