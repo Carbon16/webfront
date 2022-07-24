@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Incident Report</title>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <table>
+            <tr>
+              <th>Date-Time</th>
+              <th>Severity</th>
+              <th>Attempt</th>
+              <th>Treated</th>
+              <th>Note</th>
+              <th>UNX</th>
+              <th>id</th>
+              <th>url</th>
+            </tr>
+            <tr>
+              <td id="dt"></td>
+              <td id="sev"></td>
+              <td id="atmp"></td>
+              <td id="trt"></td>
+              <td id="note"></td>
+              <td id="UNX"></td>
+              <td id="id"></td>
+              <td id="url"></td>
+            </tr>
+        </table>
+    </body>
+    <script>
+        let params = new URLSearchParams(document.location.search);
+        let name = params.get("id")
+        var ur = String(name);
+        fetch(`https://api.lgsk.me/sh/${ur}`)
+            .then(response => response.json())
+            .then(function(data) {
+                document.getElementById("dt").innerHTML = data.hum,
+                document.getElementById("sev").innerHTML = data.severity,
+                document.getElementById("atmp").innerHTML = data.type,
+                document.getElementById("trt").innerHTML = data.treated,
+                document.getElementById("note").innerHTML = data.note,
+                document.getElementById("UNX").innerHTML = data.stmp,
+                document.getElementById("id").innerHTML = data.id,
+                document.getElementById("url").innerHTML = `<a href="https://api.lgsk.me/sh/${data.id}">Here</a>`
+            });
+    </script>
+</html>

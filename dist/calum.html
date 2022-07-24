@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Calmur's stats</title>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="bigchungus">
+        </br>
+        <h1 class="center1 fw-bold">Calmur's stats</h1>
+        </br>
+        </br>
+        </br>
+        </br>
+        <h1 id="c1" class="dashed center2"><i>ERROR</i></h1>
+        </br>
+        </br>
+        <div id="list" class="">ERROR</div>
+    </body>
+    <script>
+        //Counter
+        var punk = 0
+        var chars = 0
+        var ratio = 0
+        function av(data) {
+            data.forEach(data=> {
+                punk += data.punk
+                chars += data.chars
+            });
+            var ratio = (punk/chars).toFixed(3)
+            return ratio;
+        };
+        
+        fetch('https://api.lgsk.me/kd')
+            .then(response => response.json())
+            .then(data => document.getElementById("c1").innerHTML = "<b>"+ av(data) + "<b>");
+        //List
+        function listIn(data) {
+            var message = `<i>${data.length} logs found</i>\n<table>\n<tr>\n<th>Date-time</th>\n<th>Chars</th>\n<th>Punk</th><th>Ratio</th><th>Msg</th>`;
+            data.forEach(data=> {
+                message += `<tr>\n<td>${data.rn}</td>\n<td>${data.chars}</td>\n<td>${data.punk}</td><td>${data.ratio}</td><td>${data.content}</td></tr>\n`;
+            });
+            return message;
+        };
+
+        fetch('https://api.lgsk.me/kd')
+            .then(response => response.json())
+            .then(data => document.getElementById("list").innerHTML = listIn(data) +"</table>");
+
+    </script>
+</html>

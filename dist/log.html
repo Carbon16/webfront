@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Days Without Incident</title>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="bigchungus">
+        </br>
+        <h1 class="center1 fw-bold">Days Without Incident</h1>
+        </br>
+        </br>
+        </br>
+        </br>
+        <h1 id="c1" class="dashed center2"><i>ERROR</i></h1>
+        </br>
+        </br>
+        <h1 id="c2" class="dashed2 center2"><i>ERROR</i></h1>
+        </br>
+        </br>
+        <div id="list" class="">ERROR</div>
+    </body>
+    <script>
+        params = new URLSearchParams(document.location.search);
+        function hashCode(string) {
+            var hash = 0, i, chr;
+            if (string.length === 0) return hash;
+            for (i = 0; i < string.length; i++) {
+                chr   = string.charCodeAt(i);
+                hash  = ((hash << 5) - hash) + chr;
+                hash |= 0; // Convert to 32bit integer
+            }
+            return hash;
+            alert(hash);
+        };
+        //Counter
+        fetch('https://api.lgsk.me/count')
+            .then(response => response.json())
+            .then(data => document.getElementById("c1").innerHTML = "<b>"+data+"<b>");
+        //List
+        function listIn(data) {
+            var message = `<i>${data.length} logs found</i>\n<table>\n<tr>\n<th>Date-time</th>\n<th>Severity</th>\n<th>Note</th><th>Link</th>\n</tr>\n`;
+            data.forEach(data=> {
+                message += `<tr>\n<td>${data.hum}</td>\n<td>${data.severity}</td>\n<td><a onclick="note(${data.id})">Click</a></td><td><a href="https://lgsk.me/deet?id=${data.id}">Click Here</a></td>\n</tr>\n`;
+            });
+            return message;
+        };
+
+        fetch('https://api.lgsk.me/sh')
+            .then(response => response.json())
+            .then(data => document.getElementById("list").innerHTML = listIn(data) +"</table>");
+
+        fetch('https://api.lgsk.me/sh')
+            .then(response => response.json())
+            .then(data => {
+                var len2 = data.length;
+                var last = data[len2-1].stmp;
+                var noww = new Date().getTime();
+                var count = Math.floor((noww - last)/86400000);
+                var countDownDate = (last+86400000*(count+1));
+                console.log(countDownDate)
+                // Update the count down every 1 second
+                var x = setInterval(function() {
+                    // Get oday's date and time
+                    var now = new Date().getTime();
+                    // Find the distance between now and the count down date
+                    var distance = countDownDate - now;
+                    // Time calculations for days, hours, minutes and seconds
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    document.getElementById("c2").innerHTML = `<b>${days}:${hours}:${minutes}:${seconds}</b>`;
+                }, 1000)});
+
+        function note(id) {
+            fetch(`https://api.lgsk.me/sh/${id}`)
+                .then(response => response.json())
+                .then(data => alert(data.note));
+        }
+
+
+    </script>
+</html>

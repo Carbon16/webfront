@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Cαrbon</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#page-top">Cαrbon</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Login/Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder">Welcome to the Cαrbon portal</h1>
+                <p class="lead">This site is still under development.</a></p>
+                <a class="btn btn-lg btn-light" href="#about">What?</a>
+            </div>
+        </header>
+        <!-- About section-->
+        <section id="about">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>About</h2>
+                        <p class="lead">Live applications:</p>
+                        <ul>
+                            <li><a href="https://lgsk.me/calum">Stats</a></li>
+                            <!-- <li>Personal admin pages</li> -->
+                            <li>Coming soon...</li>
+                            <!-- <li>Random stuff I do for fun as well</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services section-->
+        <section class="bg-light" id="services">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Services</h2>
+                        <p class="lead">Codename applications:</a></p>
+                        <ul>
+                            <li><a onclick="codename(1)">VRG</a></li>
+                            <!-- <li>Options</li> -->
+                            <li><a onclick="codename(2)">LOG</a></li>
+                            <!--<li></li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact section-->
+        <section class="bg-light" id="contact">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Login/Register</h2>
+                        <p class="lead">To login, please click the button below. To register, please try to create an account by clicking the button. <i>Note: it may or may not work. Most probably it will not.</i></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="boton">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Login</h2>
+                        <p class="lead">Login to the secure portal</i></p>
+                        <div class="text-center">
+                            <a href="https://auth.lgsk.me" class="button button2">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4"><p class="m-0 text-center text-white"><a href="tos.html">Privacy, TOS & Copyright</a></p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script>
+            function codename(id) {
+                const toke = prompt("Please enter your token", )//;"Hint: What are you? A b****"
+                yoink(id, toke);
+                if (id == 1) {
+                    window.location.href = `https://lgsk.me/${res}`;
+                } else if (id == 2) {
+                    window.location.href = `https://lgsk.me/${res}`;
+                };
+            }
+
+        function yoink(place, toke) {
+            fetch('https://api.lgsk.me/route', {
+                headers: {
+                    'placetogo': place,
+                    'securetoken': toke
+                }})
+                .then(data => {
+                    var data = String(data)
+                    alert(data)
+                    var res = data
+                    return res;
+                });
+        }
+        </script>
+    </body>
+</html>

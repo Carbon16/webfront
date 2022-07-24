@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>HANSEL</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/HANSEL.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="center1" id="bigDaddy">
+            <h1 id="inn">CONNECTING...</h1>
+        </div>
+    </body>
+    <script>
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        };
+        async function load() {
+            document.getElementById("inn").innerHTML = "<a class=\"rd\">CONNECTING.</a>"
+            await sleep(500)
+            document.getElementById("inn").innerHTML = "<a class=\"rd\">CONNECTING..</a>"
+            await sleep(500)
+            document.getElementById("inn").innerHTML = "<a class=\"rd\">CONNECTING...</a>"
+            await sleep(500)
+            document.getElementById("inn").innerHTML = "<a class=\"rd\">CONNECTING.</a>"
+            await sleep(500)
+            document.getElementById("inn").innerHTML = "<a class=\"rd\">CONNECTING..</a>"
+            await sleep(500)
+            document.getElementById("inn").innerHTML = "<a class=\"rd\">CONNECTING...</a>"
+            await sleep(500)
+            document.getElementById("inn").innerHTML = "<a class=\"rd\">CONNECTING.</a>"
+            await sleep(500)
+            document.getElementById("inn").innerHTML = "<a class=\"rd\">CONNECTING..</a>"
+            await sleep(500)
+            document.getElementById("inn").innerHTML = "<a class=\"rd\">CONNECTING...</a>"
+            await sleep(500)
+            document.getElementById("inn").innerHTML = "CONNECTED SUCESS!"
+            await sleep(2000)
+            document.getElementById("bigDaddy").innerHTML = "<h1><a class=\"yl\">PLEASE AUTHENTICATE</a></h1><form><input type=\"password\" id=\"fname\" name=\"fname\" placeholder=\"Initials (full)\"></form>"
+        };
+        load()
+    </script>
+</html>
