@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>HANSEL</title>
@@ -10,22 +11,69 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/HANSEL.css" rel="stylesheet" />
     </head>
-    <body>
-        <div class="center1" id="bigDaddy">
+    <body id="root">
+        <div class="center1" id="all">
             <h1 id="inn">CONNECTING...</h1>
         </div>
     </body>
     <script>
+        String.prototype.hashCode = function() {
+            var hash = 0, i, chr;
+            if (this.length === 0) return hash;
+            for (i = 0; i < this.length; i++) {
+                chr   = this.charCodeAt(i);
+                hash  = ((hash << 5) - hash) + chr;
+                hash |= 0; // Convert to 32bit integer
+            }
+            return hash;
+        };
+
         function sleep(ms) {
             return new Promise(resolve => setTimeout(resolve, ms));
         };
+
+        function ping(bo) {
+            const request = new XMLHttpRequest();
+            request.open("POST", "https://canary.discord.com/api/webhooks/1000924305128964197/y7y8Xh2M70vJOOv_ud7Q16jXZUc9g7f-FnA-VPBiaZs-YtgcGrhF09CklCOu7ilDNCXv");
+            request.setRequestHeader('Content-type', 'application/json');
+            const params = {
+                username: "HANSEL",
+                avatar_url: "",
+                content: "<@535167749479989260> " + bo
+            }
+            request.send(JSON.stringify(params));
+        };
+
+        async function yeet() {
+            const hashed = document.getElementById('semd').value.hashCode();
+            const res = await fetch('https://api.lgsk.me/auth', {
+                method: 'GET',
+                headers: {
+                    'securetoken': hashed
+                }
+            });
+            if (res.status == 202) {
+                ping("SUCESS BY " + document.getElementById('semd').value)
+                document.cookie = `oglin=${hashed}`;
+                const usr = await fetch('https://api.lgsk.me/auth/usr', {
+                method: 'GET',
+                headers: {
+                    'securetoken': hashed
+                }})
+                    .then((response) => response.json())
+                    .then((data) => document.getElementById("all").innerHTML = `<h1>Success!</h1><h3>You are now logged in as: <a class=\"yl\">${data.usr}</a></h3>`);
+                await sleep(2000);
+            } else {
+                document.getElementById("root").style.backgroundColor = `red`;
+                document.getElementById("all").innerHTML = `<h1 class="yl">FAILED!</h1>`
+                //ping("FALIURE WITH " + document.getElementById('semd').value)
+                await sleep(2000)
+                document.getElementById("root").style.backgroundColor = `darkslategray`;
+                document.getElementById("all").innerHTML = "<h1><a class=\"yl\">PLEASE AUTHENTICATE</a></h1><form name=\"init\" action=\"#\" id=\"init\">    <input class=\"furm\" type=\"text\" id=\"semd\" name=\"as\" placeholder=\"Initials (caps)\"><button class=\"butt\" type=\"button\" onclick=\"yeet()\">GO</button></form>"
+            };
+        };
+
         async function load() {
-            document.getElementById("inn").innerHTML = "<a class=\"rd\">CONNECTING.</a>"
-            await sleep(500)
-            document.getElementById("inn").innerHTML = "<a class=\"rd\">CONNECTING..</a>"
-            await sleep(500)
-            document.getElementById("inn").innerHTML = "<a class=\"rd\">CONNECTING...</a>"
-            await sleep(500)
             document.getElementById("inn").innerHTML = "<a class=\"rd\">CONNECTING.</a>"
             await sleep(500)
             document.getElementById("inn").innerHTML = "<a class=\"rd\">CONNECTING..</a>"
@@ -40,8 +88,9 @@
             await sleep(500)
             document.getElementById("inn").innerHTML = "CONNECTED SUCESS!"
             await sleep(2000)
-            document.getElementById("bigDaddy").innerHTML = "<h1><a class=\"yl\">PLEASE AUTHENTICATE</a></h1><form><input type=\"password\" id=\"fname\" name=\"fname\" placeholder=\"Initials (full)\"></form>"
+            document.getElementById("all").innerHTML = "<h1><a class=\"yl\">PLEASE AUTHENTICATE</a></h1><form name=\"init\" action=\"#\" id=\"init\">    <input class=\"furm\" type=\"text\" id=\"semd\" name=\"as\" placeholder=\"Initials (caps)\"><button class=\"butt\" type=\"button\" onclick=\"yeet()\">GO</button></form>"
         };
+
         load()
     </script>
 </html>
