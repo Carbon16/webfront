@@ -17,6 +17,7 @@
         </div>
     </body>
     <script>
+        //FUNCTIONS
         String.prototype.hashCode = function() {
             var hash = 0, i, chr;
             if (this.length === 0) return hash;
@@ -44,8 +45,40 @@
             request.send(JSON.stringify(params));
         };
 
-        async function yeet() {
-            const hashed = document.getElementById('semd').value.hashCode();
+        function nrom() {
+            document.getElementById("root").style.backgroundColor = `black`;
+            document.getElementById("root").innerHTML =  `<h1 class="center1">GOODBIE <a class=\"yl\">${nom}</a></h1>`
+            sleep(1000)
+            location.assign("https://lgsk.me")
+        }
+
+        //Processes
+
+        function read() {
+            function listyh(data) {
+                var message = `<i>${data.length} entries found</i>\n<table>\n<tr>\n<th>Date</th>\n<th>Title</th>\n<th>Content</th></tr>\n`;
+                data.forEach(data=> {
+                    message += `<tr>\n<td>${data.hum}</td>\n<td>${data.severity}</td>\n<td><a onclick="note(${data.id})">Click</a></td><td><a href="https://lgsk.me/deet?id=${data.id}">Click Here</a></td>\n</tr>\n`;
+                });
+                return message;
+                };
+
+            fetch('https://api.lgsk.me/hn/read',
+                {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        ''
+                    }
+                }).then(response => response.json())
+                .then(data => document.getElementById("list").innerHTML = listyh(data) +"</table>");
+        }
+
+        async function yeet(hashed) {
+            if (hashed == null) {
+
+                const hashed = document.getElementById('semd').value.hashCode();
+            };
             const res = await fetch('https://api.lgsk.me/auth', {
                 method: 'GET',
                 headers: {
@@ -61,15 +94,17 @@
                     'securetoken': hashed
                 }})
                     .then((response) => response.json())
-                    .then((data) => document.getElementById("all").innerHTML = `<h1>Success!</h1><h3>You are now logged in as: <a class=\"yl\">${data.usr}</a></h3>`);
+                    .then((data) => nom = data.usr);
+                document.getElementById("all").innerHTML = `<h1>Success!</h1><h3 id="draw">You are now logged in as: <a class=\"yl\" id="draw">${nom}</a></h3>`
                 await sleep(2000);
+                document.getElementById("root").innerHTML = `<h1 class="yl center2">DASHBOARD</h1><h3 class="center">Logged in as: <a class="yl">${nom}</a></h2><div class="center"><button onlcikc="state()" class="item">STATUS <</button><button onlick="send()" class="item">SEND <</button><button onclick="read()" class="item">PUBLISHED <</button><button onclick="nrom()" class="item">Logout <</button></div>`;
             } else {
                 document.getElementById("root").style.backgroundColor = `red`;
                 document.getElementById("all").innerHTML = `<h1 class="yl">FAILED!</h1>`
                 //ping("FALIURE WITH " + document.getElementById('semd').value)
                 await sleep(2000)
                 document.getElementById("root").style.backgroundColor = `darkslategray`;
-                document.getElementById("all").innerHTML = "<h1><a class=\"yl\">PLEASE AUTHENTICATE</a></h1><form name=\"init\" action=\"#\" id=\"init\">    <input class=\"furm\" type=\"text\" id=\"semd\" name=\"as\" placeholder=\"Initials (caps)\"><button class=\"butt\" type=\"button\" onclick=\"yeet()\">GO</button></form>"
+                document.getElementById("all").innerHTML = "<h1><a class=\"yl\">PLEASE AUTHENTICATE</a></h1><form name=\"init\" action=\"#\" id=\"init\">    <input class=\"furm\" type=\"text\" id=\"semd\" name=\"as\" placeholder=\"Initials (caps)\"><button class=\"butt\" type=\"button\" onclick=\"yeet()\">GO<</form>"
             };
         };
 
@@ -86,8 +121,12 @@
             await sleep(500)
             document.getElementById("inn").innerHTML = "<a class=\"rd\">CONNECTING...</a>"
             await sleep(500)
-            document.getElementById("inn").innerHTML = "CONNECTED SUCESS!"
+            document.getElementById("inn").innerHTML = "<a id=\"draw\">CONNECTED SUCESS!</a>"
             await sleep(2000)
+            let x = document.cookie;
+            if (x !== null){
+                yeet(x.split("=")[1]);
+            }
             document.getElementById("all").innerHTML = "<h1><a class=\"yl\">PLEASE AUTHENTICATE</a></h1><form name=\"init\" action=\"#\" id=\"init\">    <input class=\"furm\" type=\"text\" id=\"semd\" name=\"as\" placeholder=\"Initials (caps)\"><button class=\"butt\" type=\"button\" onclick=\"yeet()\">GO</button></form>"
         };
 
