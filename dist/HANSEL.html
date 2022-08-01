@@ -86,7 +86,7 @@
             //let dex = dex + 1
             let x = document.cookie;
             token = x.split("=")[1]
-            fetch('http://localhost/hn/read',
+            fetch('https://localhost/hn/read',
                 {
                     method: 'GET',
                     headers: {
@@ -110,7 +110,7 @@
                 return message;
             };
 
-            fetch('http://localhost/hn/read',
+            fetch('https://localhost/hn/read',
                 {
                     method: 'GET',
                     headers: {
@@ -130,7 +130,7 @@
         async function yeet() {
             let x = document.cookie;
             const hashed = x.split("=")[1];
-            const res = await fetch('http://localhost/auth', {
+            const res = await fetch('https://localhost/auth', {
                 method: 'GET',
                 headers: {
                     'securetoken': hashed
@@ -139,7 +139,7 @@
             if (res.status == 202) {
                 ping("SUCESS BY " + document.getElementById('semd').value)
                 document.cookie = `oglin=${hashed}`;
-                const usr = await fetch('http://localhost/auth/usr', {
+                const usr = await fetch('https://localhost/auth/usr', {
                 method: 'GET',
                 headers: {
                     'securetoken': hashed
