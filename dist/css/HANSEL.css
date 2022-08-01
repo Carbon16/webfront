@@ -9,6 +9,23 @@ body {
     color: greenyellow;
 }
 
+table {
+    width: 100%;
+}
+
+#myProgress {
+    width: 60%;
+    align-self: center;
+    background-color: gray;
+}
+
+#myBar {
+    width: 1%;
+    height: 30px;
+    background-color: greenyellow;
+}
+
+
 .rd {
     color: crimson;
 }
@@ -89,6 +106,8 @@ body {
 .center {
     text-align: center;
     align-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .center1 {
