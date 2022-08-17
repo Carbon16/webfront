@@ -131,7 +131,7 @@
   height: 50%;
   font-size: 900%;
   text-align: center;
-  rotate: 90;
+  transform: rotate(180deg);
   margin-bottom: 50%;
 }
 .wt{
