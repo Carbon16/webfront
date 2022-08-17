@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <title>Days Without Incident</title>
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="/dist/css/styles.css" rel="stylesheet" />
     </head>
     <body id="bigchungus">
         </br>
@@ -43,7 +43,7 @@
         function listIn(data) {
             var message = `<i>${data.length} logs found</i>\n<table>\n<tr>\n<th>Date-time</th>\n<th>Severity</th>\n<th>Note</th><th>Link</th>\n</tr>\n`;
             data.forEach(data=> {
-                message += `<tr>\n<td>${data.hum}</td>\n<td>${data.severity}</td>\n<td><a onclick="note(${data.id})">Click</a></td><td><a href="https://lgsk.me/deet?id=${data.id}">Click Here</a></td>\n</tr>\n`;
+                message += `<tr>\n<td>${data.hum}</td>\n<td>${data.severity}</td>\n<td><a onclick="note(${data.id})">Click</a></td><td><a href="https://lgsk.me/sh/deet?id=${data.id}">Click Here</a></td>\n</tr>\n`;
             });
             return message;
         };
