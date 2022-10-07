@@ -1,0 +1,178 @@
+@font-face {
+    font-family: CON;
+    src: url(slkscr.ttf);
+}
+
+body {
+    background-color: darkslategray;
+    font-family: CON;
+    color: greenyellow;
+}
+
+table {
+    width: 100%;
+}
+
+#myProgress {
+    width: 60%;
+    align-self: center;
+    background-color: gray;
+}
+
+#myBar {
+    width: 1%;
+    height: 30px;
+    background-color: greenyellow;
+}
+
+
+.rd {
+    color: crimson;
+}
+
+.yl {
+    color: yellow;
+}
+
+.container {
+    grid-template-columns: auto auto auto;
+    width: auto;
+    font-size: 20px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid gray;
+    -webkit-transition: 0.5s;
+    text-align: center;
+    transition: 0.5s;
+    outline: none;
+    color: yellow;
+    font-family: CON;
+    background-color: darkslategray;
+}
+
+.item {
+    font-size: 20px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    align-items: center;
+    box-sizing: border-box;
+    border: 3px solid rgba(128, 128, 128, 0.625);
+    -webkit-transition: 0.5s;
+    text-align: center;
+    transition: 0.5s;
+    outline: none;
+    color: yellow;
+    font-family: CON;
+    background-color: darkslategray;
+}
+
+.item:hover {
+    font-size: 20px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid yellowgreen;
+    -webkit-transition: 0.5s;
+    text-align: center;
+    transition: 0.5s;
+    outline: none;
+    color: yellow;
+    font-family: CON;
+    background-color: darkslategray;
+}
+
+.item:focus {
+    font-size: 20px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid yellow;
+    -webkit-transition: 0.5s;
+    text-align: center;
+    transition: 0.5s;
+    outline: none;
+    color: yellowgreen;
+    font-family: CON;
+    background-color: darkslategray;
+}
+  
+.center2 {
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center1 {
+    text-align: center;
+    padding-top: 20%;
+}
+
+.furm {
+    font-size: 20px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid red;
+    -webkit-transition: 0.5s;
+    text-align: center;
+    transition: 0.5s;
+    outline: none;
+    color: yellow;
+    font-family: CON;
+    background-color: darkslategray;
+}
+
+.furm:focus {
+    border: 3px solid green;
+    background-color: rgb(47, 70, 79);
+}
+
+.furm:focus ~ .butt {
+    border: 3px solid green;
+    background-color: green;
+}
+
+.butt {
+    font-size: 20px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid red;
+    text-align: center;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    outline: none;
+    color: yellow;
+    font-family: CON;
+    background-color: red;
+}
+
+.butt:focus {
+    border: 3px solid green;
+    background-color: green;
+}
+
+.butt:hover {
+    border: 3px solid yellow;
+    background-color: green;
+}
+
+/* .invalid {
+    border: 3px solid red;
+    background-color: red;
+    color: yellow;
+} */
+
+/* @media only screen and (max-width: 600px) {
+    input[type=text] {
+        width: 70%;
+    }
+} */
