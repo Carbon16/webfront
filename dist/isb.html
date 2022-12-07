@@ -63,10 +63,24 @@
                 or <b>I like...</b><i>  to read.</i></p>
                 or <b>I like...</b><i>  to talk to people often as they make me feel ...</i></p>
                 <p>When you are ready to start, press the 'Start' button.</p>
-                <button type="button" onclick="test()">Start</button>
+                <button type="button" onclick="reg()">Start</button>
                 </div>
             </div>`;
         };
+        function reg() {
+            var testId = crypto.randomUUID()
+            fetch("https://api.lgsk.live/isb/test/resp/new", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    nom: document.cookie.split(";")[1].split("=")[1],
+                    tid: testId
+                })
+            })
+            test(testId);
+        }
         //fetch the length of the test
         async function len() {
             var length = await fetch("https://api.lgsk.live/isb/test/length")
@@ -76,8 +90,7 @@
                 });
             return length;
         };
-        async function test() {
-            var testId = crypto.randomUUID()
+        async function test(testId) {
             var length = await len();
             for (i = 0; i < length; i++) {
                 let cont = false
@@ -94,6 +107,8 @@
                                 <div style="display:inline-block"><p>Stem:  ` + data + `</p><input onkeypress="this.style.width = Math.max(this.value.length, 20) + 'ch';" type="text" id="q" name="q"></div>
                                 <br><br>
                                 <button type="button" id="ne">Next</button>
+                                <br><br><br>
+                                <p>Test ID: ` + testId + `</p>
                             </div>`;
                 })
                 document.getElementById("ne").addEventListener("click", function(){
@@ -107,7 +122,7 @@
         };
         function poo(i, testId) {
             var ans = document.getElementById("q").value;
-            fetch("https://api.lgsk.live/isb/test/resp/" + testId, {
+            fetch("https://api.lgsk.live/isb/test/resp", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
