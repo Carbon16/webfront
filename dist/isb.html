@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>ISB Test</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="./css/styles.css" rel="stylesheet" />
+    </head>
+    <script>
+        function consent() {
+            if (document.getElementById("consent").checked) {
+                ident();
+            } else {
+                alert("You must agree to continue.");
+            }
+        };
+        function ident() {
+            document.getElementById("root").innerHTML = "error";
+            document.getElementById("root").innerHTML = `
+            <div class="container">
+                <h1>ISB Test</h1>
+                <h2>Before we start, please provide some details.</h2>
+                <p>These details will be not be used to identify you. They will not be shared. For a generic test just enter 'TEST'.</p>
+                <form>
+                    <label for="uname">Test ID:</label><br>
+                    <input type="text" id="tid" name="tid"><br>
+                    <label for="psw">Name (optional):</label><br>
+                    <input type="text" id="nom" name="nom"><br><br>
+                    <button type="button" onclick="auth()">Continue</button>
+                </form>
+            </div>
+            `;
+        };
+        function auth() {
+            //fetch from api to check if tid is valid
+            fetch("http://localhost:3000/isb/auth/" + document.getElementById("tid").value)
+                .then(response => {
+                    if (response.status == 202) {
+                        document.cookie = "tid=" + document.getElementById("tid").value;
+                        document.cookie = "nom=" + document.getElementById("nom").value;
+                        instructor();
+                    } else {
+                        alert("Test ID is invalid.");
+                    }
+        })};
+        function instructor() {
+            //display instructions for test
+            document.getElementById("root").innerHTML = `
+            <div class="container">
+                <h1>ISB Test</h1>
+                <h2>Instructions</h2>
+                <p>Read the each sentence and complete it in the way that feels best.</p>
+                <p>There is no right or wrong answer. Just be honest.</p>
+                <p>When you have completed the sentence, press the 'Next' button to continue.</p>
+                <p>Each sentence needs an honest answer. There is no time limit, so take as long as you need. Try not to think about the marking of the test and just answer in the way that feels best.</p>
+                <p>Not every sentence will be relevant to you. If you don't know what to say, just leave it blank, or incomplete. Try to attempt as many as possible.</p>
+                <div class="dashed3">
+                <p>For example: <b>I like...</b><i>  to play golf.</i></p>
+                or <b>I like...</b><i>  to read.</i></p>
+                or <b>I like...</b><i>  to talk to people often as they make me feel ...</i></p>
+                <p>When you are ready to start, press the 'Start' button.</p>
+                <button type="button" onclick="test()">Start</button>
+                </div>
+            </div>`;
+        };
+        //fetch the length of the test
+        async function len() {
+            var length = await fetch("http://localhost:3000/isb/test/length")
+                .then(response => response.json())
+                .then(data => {
+                    return data;
+                });
+            return length;
+        };
+        async function test() {
+            var testId = crypto.randomUUID()
+            var length = await len();
+            for (i = 0; i < length; i++) {
+                let cont = false
+                await fetch(`http://localhost:3000/isb/test/${i}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        var testId = crypto.randomUUID()
+                            document.getElementById("root").innerHTML = "error";
+                            document.getElementById("root").innerHTML = `
+                            <div class="container">
+                                <h1 class="testhed">ISB Test</h1>
+                                <h3>Question ` + (i + 1) + ` of ` + length + `</h4>
+                                </br>
+                                <div style="display:inline-block"><p>Stem:  ` + data + `</p><input onkeypress="this.style.width = Math.max(this.value.length, 20) + 'ch';" type="text" id="q" name="q"></div>
+                                <br><br>
+                                <button type="button" id="ne">Next</button>
+                            </div>`;
+                })
+                document.getElementById("ne").addEventListener("click", function(){
+                    cont = true
+                });
+                while (cont == false ) {
+                    await new Promise(r => setTimeout(r, 100));
+                }
+                poo(i, testId);
+            }
+        };
+        function poo(i, testId) {
+            var ans = document.getElementById("q").value;
+            fetch("http://localhost:3000/isb/test/resp/" + testId, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    tid: document.cookie.split(";")[0].split("=")[1],
+                    nom: document.cookie.split(";")[1].split("=")[1],
+                    ans: ans,
+                    question: i,
+                    testId: testId
+                })
+            })
+        }
+    </script>
+    <body id="root">
+        <div class="container">
+        <h1>ISB Test</h1>
+        <h2>You have probably been invited to take part in an ISB test. Before you start there are one or to things to know.</h2>
+        <div class="bg-light">
+        <h3>What is ISB?</h3>
+        <p>ISB stands for the Incomplete Sentence Blank. It is a bank of "stems" or sentence starters that can help to analyse and understand the subjects taking the test. The test can be "scored" and copared to other tests.</p>
+        </div>
+        <h3>What is the ISB for?</h3>
+        <p>The ISB is a semi-standardised test to help with clinical psychological analaysis. The answers you submit can be quantitativley and qualitativley marked.</p>
+        <div class="bg-light">
+        <h3>What is this ISB not for?</h3>
+        <p>This ISB test is for <b style="color: red">RESEARCH PURPOSES ONLY.</b> This means the test should not be relied upon for diagnosis or recognition of clinical symptoms.</p>
+        </div>
+        <h3>What will happen to my answers?</h3>
+        <p>Your answers will be marked by a <b style="color: red">non-clinican.</b> The use of your answers will depend on your reason for taking this test, eg. answers for reaserch purposes will be used in a study. You will recieve a copy of your marked resuts and meanings. Your answers will never be shared, unless permission is given and even then only anonymised data will be shared.</p>
+        <div class="bg-light">
+        <h3>What if I don't want to take part?</h3>
+        <p>If you do not want to take part in this test, you can leave the page now. You can withdraw at any point. If you have any questions, please contact the person who invited you to take part in this test.</p>
+        </div>
+        <h3>How do I take part?</h3>
+        <p>Tick the box below to confirm your understanding of the above. Then press continue.</p>
+        
+        <input type="checkbox" id="consent" name="consent" value="true">
+        <label for="consent">I confirm I understand and agree with the above, and that I understand and agree to any relevant study policy.</label><br>
+        <br>
+        <button type="button" onclick="consent()">Continue</button>
+        </div>
+    </body>
+</html>

@@ -73,6 +73,16 @@
   text-align: center;
   border-width: thick;
 }
+.testhed {
+  text-align: left;
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+}
+
+.inpoot {
+  min-width: 200%;
+}
 
 .dashed2 {
   border-style: dashed;
@@ -80,6 +90,15 @@
   padding: 10px;
   margin: 0;
   width: 300px;
+  text-align: center;
+  border-width: medium;
+}
+.dashed3 {
+  border-style: dashed;
+  border-color: gray;
+  padding: 10px;
+  margin: 0;
+  width: 75%;
   text-align: center;
   border-width: medium;
 }
