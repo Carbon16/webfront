@@ -37,7 +37,7 @@
         };
         function auth() {
             //fetch from api to check if tid is valid
-            fetch("http://localhost:3000/isb/auth/" + document.getElementById("tid").value)
+            fetch("https://api.lgsk.live/isb/auth/" + document.getElementById("tid").value)
                 .then(response => {
                     if (response.status == 202) {
                         document.cookie = "tid=" + document.getElementById("tid").value;
@@ -69,7 +69,7 @@
         };
         //fetch the length of the test
         async function len() {
-            var length = await fetch("http://localhost:3000/isb/test/length")
+            var length = await fetch("https://api.lgsk.live/isb/test/length")
                 .then(response => response.json())
                 .then(data => {
                     return data;
@@ -81,7 +81,7 @@
             var length = await len();
             for (i = 0; i < length; i++) {
                 let cont = false
-                await fetch(`http://localhost:3000/isb/test/${i}`)
+                await fetch(`https://api.lgsk.live/isb/test/${i}`)
                     .then(response => response.json())
                     .then(data => {
                         var testId = crypto.randomUUID()
@@ -107,7 +107,7 @@
         };
         function poo(i, testId) {
             var ans = document.getElementById("q").value;
-            fetch("http://localhost:3000/isb/test/resp/" + testId, {
+            fetch("https://api.lgsk.live/isb/test/resp/" + testId, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
