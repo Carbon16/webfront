@@ -120,18 +120,19 @@
                 }
                 poo(i, testId);
             }
+            fin()
         };
-        //function fin() {
-        //    document.getElementById("root").innerHTML = `
-        //    <div class="container">
-        //       <h1>ISB Test</h1>
-        //        <h2>Thank you for completing the test.</h2>
-        //        <p>Your answers have been recorded.</p>
-        //        <p>Your test ID is: ` + testId + `</p>
-        //        <p>Your identifier is: ` + document.cookie.split(";")[0].split("=")[1] + `</p>
-        //        <p>Keep this ID safe. You will need it to view your results.</p>
-        //    </div>`;
-        //};
+        function fin() {
+            document.getElementById("root").innerHTML = `
+            <div class="container">
+               <h1>ISB Test</h1>
+                <h2>Thank you for completing the test.</h2>
+                <p>Your answers have been recorded.</p>
+                <p>Your test ID is: ` + testId + `</p>
+                <p>Your identifier is: ` + document.cookie.split(";")[0].split("=")[1] + `</p>
+                <p>Keep this ID safe. You will need it to view your results.</p>
+            </div>`;
+        };
         function poo(i, testId) {
             var ans = document.getElementById("q").value;
             fetch("https://api.lgsk.live/isb/test/resp", {
