@@ -93,8 +93,8 @@
         };
         async function test(testId) {
             var length = await len();
-            for (i = 0; i < length; i++) {
-                let cont = false
+            for (var i = 0; i < 39; i++) {
+                var cont = false
                 await fetch(`https://api.lgsk.live/isb/test/${i}`)
                     .then(response => response.json())
                     .then(data => {
@@ -105,7 +105,7 @@
                                 <h1 class="testhed">ISB Test</h1>
                                 <h3>Question ` + (i + 1) + ` of ` + length + `</h4>
                                 </br>
-                                <div style="display:inline-block"><p>Stem:  ` + data + `</p><input onkeypress="this.style.width = Math.max(this.value.length, 20) + 'ch';" type="text" id="q" name="q"></div>
+                                <div style="display:inline-block"><p>` + data + `</p><input onkeypress="this.style.width = Math.max(this.value.length, 20) + 'ch';" type="text" id="q" name="q"></div>
                                 <br><br>
                                 <button type="button" id="ne">Next</button>
                                 <br><br><br>
@@ -113,26 +113,25 @@
                             </div>`;
                 })
                 document.getElementById("ne").addEventListener("click", function(){
-                    cont = true
+                    cont = true;
                 });
-                while (cont == false ) {
+                while (cont == false) {
                     await new Promise(r => setTimeout(r, 100));
                 }
                 poo(i, testId);
             }
-            fin()
         };
-        function fin() {
-            document.getElementById("root").innerHTML = `
-            <div class="container">
-                <h1>ISB Test</h1>
-                <h2>Thank you for completing the test.</h2>
-                <p>Your answers have been recorded.</p>
-                <p>Your test ID is: ` + testId + `</p>
-                <p>Your identifier is: ` + document.cookie.split(";")[0].split("=")[1] + `</p>
-                <p>Keep this ID safe. You will need it to view your results.</p>
-            </div>`;
-        };
+        //function fin() {
+        //    document.getElementById("root").innerHTML = `
+        //    <div class="container">
+        //       <h1>ISB Test</h1>
+        //        <h2>Thank you for completing the test.</h2>
+        //        <p>Your answers have been recorded.</p>
+        //        <p>Your test ID is: ` + testId + `</p>
+        //        <p>Your identifier is: ` + document.cookie.split(";")[0].split("=")[1] + `</p>
+        //        <p>Keep this ID safe. You will need it to view your results.</p>
+        //    </div>`;
+        //};
         function poo(i, testId) {
             var ans = document.getElementById("q").value;
             fetch("https://api.lgsk.live/isb/test/resp", {
