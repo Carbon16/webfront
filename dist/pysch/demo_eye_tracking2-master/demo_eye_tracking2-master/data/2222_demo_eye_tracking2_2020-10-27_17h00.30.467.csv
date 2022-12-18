@@ -1,0 +1,6 @@
+mouse_2.x,mouse_2.y,mouse_2.leftButton,mouse_2.midButton,mouse_2.rightButton,mouse_3.x,mouse_3.y,mouse_3.leftButton,mouse_3.midButton,mouse_3.rightButton,mouse_3.clicked_name,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,trials.ran,calibration_x,calibration_y,participant,session,date,expName,psychopyVersion,OS,frameRate
+-0.007751938,0.001937984,1,0,0,0.835271318,-0.156007752,1,0,0,calibration_square,0,0,0,7,1,0.45,-0.15,2222,001,2020-10-27_17h00.30.467,demo_eye_tracking2,2020.2.4,Win32,60
+,,,,,0.840116279,0.45251938,1,0,0,calibration_square,0,1,1,18,1,0.45,0.45,2222,001,2020-10-27_17h00.30.467,demo_eye_tracking2,2020.2.4,Win32,60
+,,,,,0.278100775,-0.456395349,1,0,0,calibration_square,0,2,2,2,1,0.15,-0.45,2222,001,2020-10-27_17h00.30.467,demo_eye_tracking2,2020.2.4,Win32,60
+,,,,,-0.285852713,0.45251938,1,0,0,calibration_square,0,3,3,13,1,-0.15,0.45,2222,001,2020-10-27_17h00.30.467,demo_eye_tracking2,2020.2.4,Win32,60
+,,,,,-0.28875969,-0.444767442,1,0,0,calibration_square,0,4,4,1,1,-0.15,-0.45,2222,001,2020-10-27_17h00.30.467,demo_eye_tracking2,2020.2.4,Win32,60

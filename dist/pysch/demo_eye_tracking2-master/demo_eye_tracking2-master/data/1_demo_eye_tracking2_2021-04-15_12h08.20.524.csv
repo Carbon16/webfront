@@ -1,0 +1,17 @@
+mouse_2.x,mouse_2.y,mouse_2.leftButton,mouse_2.midButton,mouse_2.rightButton,mouse_3.x,mouse_3.y,mouse_3.leftButton,mouse_3.midButton,mouse_3.rightButton,mouse_3.clicked_name,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,trials.ran,calibration_x,calibration_y,participant,session,date,expName,psychopyVersion,OS,frameRate
+-0.07121058,-0.184638861,1,0,0,-0.881993896,0.453204476,1,0,0,calibration_square,0,0,0,19,1,-0.45,0.45,1,001,2021-04-15_12h08.20.524,demo_eye_tracking2,2020.2.5,MacIntel,60
+,,,,,0.290946083,0.445066124,1,0,0,calibration_square,0,1,1,14,1,0.15,0.45,1,001,2021-04-15_12h08.20.524,demo_eye_tracking2,2020.2.5,MacIntel,60
+,,,,,0.880976602,0.452187182,1,0,0,calibration_square,0,2,2,18,1,0.45,0.45,1,001,2021-04-15_12h08.20.524,demo_eye_tracking2,2020.2.5,MacIntel,60
+,,,,,0.295015259,-0.457273652,1,0,0,calibration_square,0,3,3,2,1,0.15,-0.45,1,001,2021-04-15_12h08.20.524,demo_eye_tracking2,2020.2.5,MacIntel,60
+,,,,,-0.869786368,0.146998983,1,0,0,calibration_square,0,4,4,8,1,-0.45,0.15,1,001,2021-04-15_12h08.20.524,demo_eye_tracking2,2020.2.5,MacIntel,60
+,,,,,-0.874872838,-0.456256358,1,0,0,calibration_square,0,5,5,0,1,-0.45,-0.45,1,001,2021-04-15_12h08.20.524,demo_eye_tracking2,2020.2.5,MacIntel,60
+,,,,,-0.288911495,-0.149033571,1,0,0,calibration_square,0,6,6,5,1,-0.15,-0.15,1,001,2021-04-15_12h08.20.524,demo_eye_tracking2,2020.2.5,MacIntel,60
+,,,,,0.884028484,-0.4491353,1,0,0,calibration_square,0,7,7,17,1,0.45,-0.45,1,001,2021-04-15_12h08.20.524,demo_eye_tracking2,2020.2.5,MacIntel,60
+,,,,,-0.284842319,0.141912513,1,0,0,calibration_square,0,8,8,9,1,-0.15,0.15,1,001,2021-04-15_12h08.20.524,demo_eye_tracking2,2020.2.5,MacIntel,60
+,,,,,0.886063072,0.144964395,1,0,0,calibration_square,0,9,9,11,1,0.45,0.15,1,001,2021-04-15_12h08.20.524,demo_eye_tracking2,2020.2.5,MacIntel,60
+,,,,,0.88301119,0.453204476,1,0,0,calibration_square,0,10,10,15,1,0.45,0.45,1,001,2021-04-15_12h08.20.524,demo_eye_tracking2,2020.2.5,MacIntel,60
+,,,,,0.292980671,0.149033571,1,0,0,calibration_square,0,11,11,10,1,0.15,0.15,1,001,2021-04-15_12h08.20.524,demo_eye_tracking2,2020.2.5,MacIntel,60
+,,,,,-0.874872838,-0.452187182,1,0,0,calibration_square,0,12,12,16,1,-0.45,-0.45,1,001,2021-04-15_12h08.20.524,demo_eye_tracking2,2020.2.5,MacIntel,60
+,,,,,-0.288911495,-0.447100712,1,0,0,calibration_square,0,13,13,1,1,-0.15,-0.45,1,001,2021-04-15_12h08.20.524,demo_eye_tracking2,2020.2.5,MacIntel,60
+,,,,,-0.873855544,0.450152594,1,0,0,calibration_square,0,14,14,12,1,-0.45,0.45,1,001,2021-04-15_12h08.20.524,demo_eye_tracking2,2020.2.5,MacIntel,60
+,,,,,0.878942014,-0.450152594,1,0,0,calibration_square,0,15,15,3,1,0.45,-0.45,1,001,2021-04-15_12h08.20.524,demo_eye_tracking2,2020.2.5,MacIntel,60

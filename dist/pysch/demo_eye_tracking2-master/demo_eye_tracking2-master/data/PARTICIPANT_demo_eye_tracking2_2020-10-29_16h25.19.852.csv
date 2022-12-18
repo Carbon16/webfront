@@ -1,0 +1,21 @@
+mouse_2.x,mouse_2.y,mouse_2.leftButton,mouse_2.midButton,mouse_2.rightButton,mouse_3.x,mouse_3.y,mouse_3.leftButton,mouse_3.midButton,mouse_3.rightButton,mouse_3.clicked_name,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,trials.ran,calibration_x,calibration_y,participant,session,date,expName,psychopyVersion,OS,frameRate
+-0.090277778,-0.275462963,1,0,0,0.804166667,-0.44537037,1,0,1,calibration_square,0,0,0,17,1,0.45,-0.45,,001,2020-10-29_16h25.19.852,demo_eye_tracking2,2020.2.4,Linux x86_64,60
+,,,,,-0.797685185,0.146296296,1,0,1,calibration_square,0,1,1,8,1,-0.45,0.15,,001,2020-10-29_16h25.19.852,demo_eye_tracking2,2020.2.4,Linux x86_64,60
+,,,,,-0.791203704,-0.452314815,1,0,1,calibration_square,0,2,2,0,1,-0.45,-0.45,,001,2020-10-29_16h25.19.852,demo_eye_tracking2,2020.2.4,Linux x86_64,60
+,,,,,0.808333333,-0.45462963,1,0,1,calibration_square,0,3,3,3,1,0.45,-0.45,,001,2020-10-29_16h25.19.852,demo_eye_tracking2,2020.2.4,Linux x86_64,60
+,,,,,0.263888889,-0.144444444,1,0,1,calibration_square,0,4,4,6,1,0.15,-0.15,,001,2020-10-29_16h25.19.852,demo_eye_tracking2,2020.2.4,Linux x86_64,60
+,,,,,-0.795833333,0.452777778,1,0,1,calibration_square,0,5,5,12,1,-0.45,0.45,,001,2020-10-29_16h25.19.852,demo_eye_tracking2,2020.2.4,Linux x86_64,60
+,,,,,-0.799074074,-0.153240741,1,0,1,calibration_square,0,6,6,4,1,-0.45,-0.15,,001,2020-10-29_16h25.19.852,demo_eye_tracking2,2020.2.4,Linux x86_64,60
+,,,,,-0.276388889,0.446759259,0,0,1,calibration_square,0,7,7,13,1,-0.15,0.45,,001,2020-10-29_16h25.19.852,demo_eye_tracking2,2020.2.4,Linux x86_64,60
+,,,,,0.802314815,-0.152314815,1,0,1,calibration_square,0,8,8,7,1,0.45,-0.15,,001,2020-10-29_16h25.19.852,demo_eye_tracking2,2020.2.4,Linux x86_64,60
+,,,,,0.270833333,0.151388889,1,0,1,calibration_square,0,9,9,10,1,0.15,0.15,,001,2020-10-29_16h25.19.852,demo_eye_tracking2,2020.2.4,Linux x86_64,60
+,,,,,-0.80462963,-0.451388889,1,0,1,calibration_square,0,10,10,16,1,-0.45,-0.45,,001,2020-10-29_16h25.19.852,demo_eye_tracking2,2020.2.4,Linux x86_64,60
+,,,,,0.797222222,0.448148148,1,0,1,calibration_square,0,11,11,18,1,0.45,0.45,,001,2020-10-29_16h25.19.852,demo_eye_tracking2,2020.2.4,Linux x86_64,60
+,,,,,-0.268981481,-0.151851852,1,0,1,calibration_square,0,12,12,5,1,-0.15,-0.15,,001,2020-10-29_16h25.19.852,demo_eye_tracking2,2020.2.4,Linux x86_64,60
+,,,,,-0.265740741,-0.444444444,1,0,1,calibration_square,0,13,13,1,1,-0.15,-0.45,,001,2020-10-29_16h25.19.852,demo_eye_tracking2,2020.2.4,Linux x86_64,60
+,,,,,-0.264351852,0.146759259,1,0,1,calibration_square,0,14,14,9,1,-0.15,0.15,,001,2020-10-29_16h25.19.852,demo_eye_tracking2,2020.2.4,Linux x86_64,60
+,,,,,0.800925926,0.447685185,1,0,1,calibration_square,0,15,15,15,1,0.45,0.45,,001,2020-10-29_16h25.19.852,demo_eye_tracking2,2020.2.4,Linux x86_64,60
+,,,,,0.806018519,0.152314815,1,0,1,calibration_square,0,16,16,11,1,0.45,0.15,,001,2020-10-29_16h25.19.852,demo_eye_tracking2,2020.2.4,Linux x86_64,60
+,,,,,-0.806018519,0.443981481,1,0,1,calibration_square,0,17,17,19,1,-0.45,0.45,,001,2020-10-29_16h25.19.852,demo_eye_tracking2,2020.2.4,Linux x86_64,60
+,,,,,0.268981481,0.449074074,1,0,1,calibration_square,0,18,18,14,1,0.15,0.45,,001,2020-10-29_16h25.19.852,demo_eye_tracking2,2020.2.4,Linux x86_64,60
+,,,,,0.264814815,-0.448611111,1,0,1,calibration_square,0,19,19,2,1,0.15,-0.45,,001,2020-10-29_16h25.19.852,demo_eye_tracking2,2020.2.4,Linux x86_64,60

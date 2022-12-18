@@ -1,0 +1,3 @@
+mouse_2.x,mouse_2.y,mouse_2.leftButton,mouse_2.midButton,mouse_2.rightButton,mouse_3.x,mouse_3.y,mouse_3.leftButton,mouse_3.midButton,mouse_3.rightButton,mouse_3.clicked_name,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,trials.ran,calibration_x,calibration_y,participant,session,date,expName,psychopyVersion,OS,frameRate
+0.141666667,-0.202777778,1,0,0,-0.265277778,-0.450694444,1,0,0,calibration_square,0,0,0,1,1,-0.15,-0.45,,001,2021-09-20_15h26.52.556,demo_eye_tracking2,2021.1.4,Win32,120.3514262
+,,,,,-0.270138889,0.45,1,0,0,calibration_square,0,1,1,13,1,-0.15,0.45,,001,2021-09-20_15h26.52.556,demo_eye_tracking2,2021.1.4,Win32,120.3514262

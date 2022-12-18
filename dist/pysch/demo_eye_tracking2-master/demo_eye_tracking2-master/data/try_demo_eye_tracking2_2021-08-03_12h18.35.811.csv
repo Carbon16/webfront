@@ -1,0 +1,21 @@
+mouse_2.x,mouse_2.y,mouse_2.leftButton,mouse_2.midButton,mouse_2.rightButton,mouse_3.x,mouse_3.y,mouse_3.leftButton,mouse_3.midButton,mouse_3.rightButton,mouse_3.clicked_name,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,trials.ran,calibration_x,calibration_y,participant,session,date,expName,psychopyVersion,OS,frameRate
+-0.167772993,-0.091416388,1,0,0,-0.158749013,0.450715301,1,0,0,calibration_square,0,0,0,13,1,-0.15,0.45,try,001,2021-08-03_12h18.35.811,demo_eye_tracking2,2021.1.4,Linux x86_64,59.95203837
+,,,,,0.463209921,-0.146948444,1,0,0,calibration_square,0,1,1,7,1,0.45,-0.15,try,001,2021-08-03_12h18.35.811,demo_eye_tracking2,2021.1.4,Linux x86_64,59.95203837
+,,,,,-0.464869467,0.148065621,1,0,0,calibration_square,0,2,2,8,1,-0.45,0.15,try,001,2021-08-03_12h18.35.811,demo_eye_tracking2,2021.1.4,Linux x86_64,59.95203837
+,,,,,-0.463481166,-0.44959806,1,0,0,calibration_square,0,3,3,0,1,-0.45,-0.45,try,001,2021-08-03_12h18.35.811,demo_eye_tracking2,2021.1.4,Linux x86_64,59.95203837
+,,,,,-0.460010413,-0.149725046,1,0,0,calibration_square,0,4,4,4,1,-0.45,-0.15,try,001,2021-08-03_12h18.35.811,demo_eye_tracking2,2021.1.4,Linux x86_64,59.95203837
+,,,,,0.465986609,-0.455845501,1,0,0,calibration_square,0,5,5,3,1,0.45,-0.45,try,001,2021-08-03_12h18.35.811,demo_eye_tracking2,2021.1.4,Linux x86_64,59.95203837
+,,,,,0.459045102,0.447938698,1,0,0,calibration_square,0,6,6,15,1,0.45,0.45,try,001,2021-08-03_12h18.35.811,demo_eye_tracking2,2021.1.4,Linux x86_64,59.95203837
+,,,,,0.46737491,-0.44959806,1,0,0,calibration_square,0,7,7,17,1,0.45,-0.45,try,001,2021-08-03_12h18.35.811,demo_eye_tracking2,2021.1.4,Linux x86_64,59.95203837
+,,,,,0.15570125,0.149453901,1,0,0,calibration_square,0,8,8,10,1,0.15,0.15,try,001,2021-08-03_12h18.35.811,demo_eye_tracking2,2021.1.4,Linux x86_64,59.95203837
+,,,,,0.152924605,-0.152501607,1,0,0,calibration_square,0,9,9,6,1,0.15,-0.15,try,001,2021-08-03_12h18.35.811,demo_eye_tracking2,2021.1.4,Linux x86_64,59.95203837
+,,,,,0.458350951,0.147371449,1,0,0,calibration_square,0,10,10,11,1,0.45,0.15,try,001,2021-08-03_12h18.35.811,demo_eye_tracking2,2021.1.4,Linux x86_64,59.95203837
+,,,,,-0.154584109,-0.453068898,1,0,0,calibration_square,0,11,11,1,1,-0.15,-0.45,try,001,2021-08-03_12h18.35.811,demo_eye_tracking2,2021.1.4,Linux x86_64,59.95203837
+,,,,,-0.151807506,-0.151807414,1,0,0,calibration_square,0,12,12,5,1,-0.15,-0.15,try,001,2021-08-03_12h18.35.811,demo_eye_tracking2,2021.1.4,Linux x86_64,59.95203837
+,,,,,-0.464869467,0.449327,1,0,0,calibration_square,0,13,13,19,1,-0.45,0.45,try,001,2021-08-03_12h18.35.811,demo_eye_tracking2,2021.1.4,Linux x86_64,59.95203837
+,,,,,0.15570125,-0.452374748,1,0,0,calibration_square,0,14,14,2,1,0.15,-0.45,try,001,2021-08-03_12h18.35.811,demo_eye_tracking2,2021.1.4,Linux x86_64,59.95203837
+,,,,,0.152924605,0.45002115,1,0,0,calibration_square,0,15,15,14,1,0.15,0.45,try,001,2021-08-03_12h18.35.811,demo_eye_tracking2,2021.1.4,Linux x86_64,59.95203837
+,,,,,-0.460010413,0.451409452,1,0,0,calibration_square,0,16,16,12,1,-0.45,0.45,try,001,2021-08-03_12h18.35.811,demo_eye_tracking2,2021.1.4,Linux x86_64,59.95203837
+,,,,,0.458350951,0.447244548,1,0,0,calibration_square,0,17,17,18,1,0.45,0.45,try,001,2021-08-03_12h18.35.811,demo_eye_tracking2,2021.1.4,Linux x86_64,59.95203837
+,,,,,-0.463481166,-0.446821542,1,0,0,calibration_square,0,18,18,16,1,-0.45,-0.45,try,001,2021-08-03_12h18.35.811,demo_eye_tracking2,2021.1.4,Linux x86_64,59.95203837
+,,,,,-0.151113355,0.151536353,1,0,0,calibration_square,0,19,19,9,1,-0.15,0.15,try,001,2021-08-03_12h18.35.811,demo_eye_tracking2,2021.1.4,Linux x86_64,59.95203837

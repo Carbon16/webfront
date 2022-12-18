@@ -1,0 +1,2 @@
+mouse_2.x,mouse_2.y,mouse_2.leftButton,mouse_2.midButton,mouse_2.rightButton,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,trials.ran,trials.order,calibration_x,calibration_y,participant,session,date,expName,psychopyVersion,OS,frameRate
+0.331481518,0.027777764,1,0,0,1,0,20,12,1,19,-0.45,0.45,a,001,2022-01-03_15h14.20.075,demo_eye_tracking2,2021.1.4,Win32,59.61962678
