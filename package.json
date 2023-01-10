@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Carbon16/webfront/issues"
   },
-  "homepage": "https://github.com/Carbon16/webfront#readme"
+  "homepage": "https://github.com/Carbon16/webfront#readme",
+  "dependencies": {
+    "nord": "^0.2.1"
+  }
 }
