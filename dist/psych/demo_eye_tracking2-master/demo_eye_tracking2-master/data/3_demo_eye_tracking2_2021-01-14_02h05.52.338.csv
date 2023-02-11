@@ -1,2 +1,0 @@
-mouse_2.x,mouse_2.y,mouse_2.leftButton,mouse_2.midButton,mouse_2.rightButton,mouse_3.x,mouse_3.y,mouse_3.leftButton,mouse_3.midButton,mouse_3.rightButton,mouse_3.clicked_name,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,trials.ran,calibration_x,calibration_y,participant,session,date,expName,psychopyVersion,OS,frameRate
-0.261682243,0.342679128,1,0,0,0.903426791,-0.151090343,1,0,0,calibration_square,0,0,0,7,1,0.45,-0.15,3,001,2021-01-14_02h05.52.338,demo_eye_tracking2,2020.2.5,MacIntel,60
