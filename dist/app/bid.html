@@ -33,6 +33,12 @@
     </b>
     </body>
     <script>
+        async function reset() {
+            await sleep(5000)
+            document.getElementById("body").style.backgroundColor = `white`;
+            document.getElementById("body").innerHTML = bodyDect;
+        }
+
         async function sleep(ms) {
             return new Promise(resolve => setTimeout(resolve, ms));
         };
@@ -42,51 +48,35 @@
             if (sut == 0 ) {
                 document.getElementById("body").style.backgroundColor = `gray`;
                 document.getElementById("body").innerHTML = `<div class="rev gre"><b>`+val+` NT</b></div><div class="nom gre"><b>`+val+` NT</b></div><i>(`+trck+` tricks in No Trumps)</i>`;
-                await sleep(5000 );
-                document.getElementById("body").style.backgroundColor = `white`;
-                document.getElementById("body").innerHTML = bodyDect;
+                reset();
             } if (sut == 4 ) {
                 document.getElementById("body").style.backgroundColor = `purple`;
                 document.getElementById("body").innerHTML = `<div class="rev prp"><b>`+val+` ♣️</b></div><div class="nom prp"><b>`+val+` ♣️</b></div><i class="wt center">(`+trck+` tricks in Clubs)</i>`;
-                await sleep(5000 );
-                document.getElementById("body").style.backgroundColor = `white`;
-                document.getElementById("body").innerHTML = bodyDect; 
+                reset();
             } if (sut == 2 ) {
                 document.getElementById("body").style.backgroundColor = `cadetblue`;
                 document.getElementById("body").innerHTML = `<div class="rev yl"><b>`+val+` ♥️</b></div><div class="nom yl"><b>`+val+` ♥️</b></div><i class="wt center">(`+trck+` tricks in Hearts)</i>`;
-                await sleep(5000 );
-                document.getElementById("body").style.backgroundColor = `white`;
-                document.getElementById("body").innerHTML = bodyDect;
+                reset();
             } if (sut == 3 ) {
                 document.getElementById("body").style.backgroundColor = `black`;
                 document.getElementById("body").innerHTML = `<div class="rev blk"><b>`+val+` ♦️</b></div><div class="nom blk"><b>`+val+` ♦️</b></div><i class="wt center">(`+trck+` tricks in Diamonds)</i>`;
-                await sleep(5000 );
-                document.getElementById("body").style.backgroundColor = `white`;
-                document.getElementById("body").innerHTML = bodyDect;
+                reset();
             } if (sut == 1 ) {
                 document.getElementById("body").style.backgroundColor = `red`;
                 document.getElementById("body").innerHTML = `<div class="rev rd"><b>`+val+` ♠️</b></div><div class="nom rd"><b>`+val+` ♠️</b></div><i class="wt center">(`+trck+` tricks in Spades)</i>`;
-                await sleep(5000 );
-                document.getElementById("body").style.backgroundColor = `white`;
-                document.getElementById("body").innerHTML = bodyDect;
+                reset();
             } if (sut == 5 ) {
                 document.getElementById("body").style.backgroundColor = `blue`;
                 document.getElementById("body").innerHTML = `<div class="rev ble"><b>X</b></div><div class="nom ble"><b>X</b></div><i class="wt center">(Double)</i>`;
-                await sleep(5000 );
-                document.getElementById("body").style.backgroundColor = `white`
-                document.getElementById("body").innerHTML = bodyDect; 
+                reset();
             } if (sut == 6 ) {
                 document.getElementById("body").style.backgroundColor = `blue`;
                 document.getElementById("body").innerHTML = `<div class="rev ble"><b>XX</b></div><div class="nom ble"><b>XX</b></div><i class="wt center">(Redouble)</i>`;
-                await sleep(5000 );
-                document.getElementById("body").style.backgroundColor = `white`
-                document.getElementById("body").innerHTML = bodyDect; 
+                reset();
             } if (sut == 7 ) {
                 document.getElementById("body").style.backgroundColor = `green`;
                 document.getElementById("body").innerHTML = `<div class="rev ge"><b>PASS</b></div><div class="nom ge"><b>PASS</b></div><i class="wt center">(Pass)</i>`;
-                await sleep(5000 );
-                document.getElementById("body").style.backgroundColor = `white`
-                document.getElementById("body").innerHTML = bodyDect;
+                reset();
             }
         };
 
@@ -98,7 +88,7 @@
                 elem.requestFullscreen();
             } else if (elem.webkitRequestFullscreen) { /* Safari */
                 elem.webkitRequestFullscreen();
-        }}
+        }};
         openFullscreen();
     </script>
 </html>
