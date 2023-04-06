@@ -6,6 +6,7 @@
         <title>Something...</title>
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.9.3/tsparticles.confetti.bundle.min.js"></script>
     </head>
     <body id="bigchungus">
 
@@ -17,14 +18,16 @@
 
     </body>
     <script>
-        //set bighungus to purple
+
         document.getElementById("bigchungus").style.backgroundColor = "slateblue";
+
         function yes() {
+            yay()
             document.getElementById("bigchungus").style.backgroundColor = "lightblue";
             document.getElementById("bigchungus").innerHTML = `    <br>
             <br>
             <br>
-                <h1 id="aaa" class="dashed center2"><i>ERROR</i></h1>`     
+                <h1 id="aaa" onclick="yay()" class="dashed center2"><i>ERROR</i></h1>`
             var x = setInterval(function() {
                 //calculate countdown to datetime
                 var countDownDate = new Date("Apr 15, 2023 13:00:00").getTime();
@@ -48,6 +51,35 @@
         function no() {
             //redirect to google
             window.location.replace("https://www.google.com/")
+        }
+
+        function yay() {
+            const defaults = {
+                spread: 360,
+                ticks: 100,
+                gravity: 0,
+                decay: 0.94,
+                startVelocity: 30,
+                shapes: ["heart"],
+                colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
+            };
+            confetti({
+            ...defaults,
+            particleCount: 50,
+            scalar: 2,
+            });
+        
+            confetti({
+            ...defaults,
+            particleCount: 25,
+            scalar: 3,
+            });
+              
+            confetti({
+            ...defaults,
+            particleCount: 10,
+            scalar: 4,
+            });
         }
     </script>
 </html>
