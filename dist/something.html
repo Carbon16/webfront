@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Something...</title>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="bigchungus">
+
+        <h1 class="center2 emoji" onclick="no()">🛖</h1>
+
+        <h1 class="emoji center2" onclick="ht()">🍂</h1>
+
+        <h1 class="emoji center2" onclick="yes()">🦋</h1>
+
+    </body>
+    <script>
+        //set bighungus to purple
+        document.getElementById("bigchungus").style.backgroundColor = "slateblue";
+        function yes() {
+            document.getElementById("bigchungus").style.backgroundColor = "lightblue";
+            document.getElementById("bigchungus").innerHTML = `    <br>
+            <br>
+            <br>
+                <h1 id="aaa" class="dashed center2"><i>ERROR</i></h1>`     
+            var x = setInterval(function() {
+                //calculate countdown to datetime
+                var countDownDate = new Date("Apr 15, 2023 13:00:00").getTime();
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                // Output the result in an element with id="aaa"
+                document.getElementById("aaa").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            }, 100);
+        }
+
+        function ht() {
+            //redirect to google
+            window.location.replace("https://heartstoppercomic.tumblr.com/post/149787577665/boy-meets-boy-important-note-this-update-was")
+        }
+
+        function no() {
+            //redirect to google
+            window.location.replace("https://www.google.com/")
+        }
+    </script>
+</html>

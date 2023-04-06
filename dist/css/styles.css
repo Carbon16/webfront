@@ -69,9 +69,10 @@
   border-color: red;
   padding: 10px;
   margin: 0;
-  width: 75%;
+  width: 50%;
   text-align: center;
   border-width: medium;
+  font-family: 'Courier New', Courier, monospace;
 }
 .testhed {
   text-align: left;
@@ -110,6 +111,12 @@
 .center2 {
   margin: auto;
   padding: 10px;
+}
+.emoji {
+  /* extra extra extra extra extra extra extra large emojis */
+    font-size: 9em;
+    /* center thmem */
+    text-align: center;
 }
 
 table {
